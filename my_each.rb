@@ -1,6 +1,9 @@
 def my_each(greeting)
-  if block_given?
-    i =[]
+    i =0
     while i< greeting.length 
-      yield puts "Hello #{name}."
+      yield(greeting[i])
+      i+=1 
+    end
+    greeting
+  end 
 end
